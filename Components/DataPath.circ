@@ -853,7 +853,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     </comp>
     <comp lib="4" loc="(810,560)" name="Register">
       <a name="width" val="1"/>
-      <a name="trigger" val="falling"/>
+      <a name="trigger" val="rising"/>
       <a name="label" val="ZF"/>
     </comp>
     <comp lib="0" loc="(770,440)" name="Tunnel">
@@ -927,7 +927,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     </comp>
     <comp lib="4" loc="(810,220)" name="Register">
       <a name="width" val="32"/>
-      <a name="trigger" val="falling"/>
+      <a name="trigger" val="rising"/>
       <a name="label" val="MDR"/>
     </comp>
     <comp lib="0" loc="(510,650)" name="Pin">
@@ -974,7 +974,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     </comp>
     <comp lib="4" loc="(810,330)" name="Register">
       <a name="width" val="32"/>
-      <a name="trigger" val="falling"/>
+      <a name="trigger" val="rising"/>
       <a name="label" val="Hi"/>
     </comp>
     <comp lib="0" loc="(140,390)" name="Pin">
@@ -1016,7 +1016,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     </comp>
     <comp lib="4" loc="(1010,220)" name="Register">
       <a name="width" val="32"/>
-      <a name="trigger" val="falling"/>
+      <a name="trigger" val="rising"/>
       <a name="label" val="ALUOut"/>
     </comp>
     <comp lib="0" loc="(870,940)" name="Tunnel">
@@ -1025,7 +1025,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     </comp>
     <comp lib="4" loc="(1010,560)" name="Register">
       <a name="width" val="1"/>
-      <a name="trigger" val="falling"/>
+      <a name="trigger" val="rising"/>
       <a name="label" val="NF"/>
     </comp>
     <comp lib="0" loc="(380,1050)" name="Tunnel">
@@ -1367,7 +1367,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     </comp>
     <comp lib="4" loc="(810,110)" name="Register">
       <a name="width" val="32"/>
-      <a name="trigger" val="falling"/>
+      <a name="trigger" val="rising"/>
       <a name="label" val="PC"/>
     </comp>
     <comp lib="0" loc="(760,1080)" name="Tunnel">
@@ -1557,12 +1557,12 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     </comp>
     <comp lib="4" loc="(1010,330)" name="Register">
       <a name="width" val="32"/>
-      <a name="trigger" val="falling"/>
+      <a name="trigger" val="rising"/>
       <a name="label" val="Lo"/>
     </comp>
     <comp lib="4" loc="(1000,110)" name="Register">
       <a name="width" val="32"/>
-      <a name="trigger" val="falling"/>
+      <a name="trigger" val="rising"/>
       <a name="label" val="IR"/>
     </comp>
     <comp lib="0" loc="(320,180)" name="Tunnel">
@@ -1575,7 +1575,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     </comp>
     <comp lib="4" loc="(1010,440)" name="Register">
       <a name="width" val="32"/>
-      <a name="trigger" val="falling"/>
+      <a name="trigger" val="rising"/>
       <a name="label" val="B"/>
     </comp>
     <comp lib="0" loc="(80,1140)" name="Tunnel">
@@ -1584,7 +1584,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     </comp>
     <comp lib="4" loc="(810,440)" name="Register">
       <a name="width" val="32"/>
-      <a name="trigger" val="falling"/>
+      <a name="trigger" val="rising"/>
       <a name="label" val="A"/>
     </comp>
     <comp lib="0" loc="(810,140)" name="Tunnel">
@@ -2546,7 +2546,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     </comp>
     <comp lib="4" loc="(330,640)" name="Register">
       <a name="width" val="32"/>
-      <a name="trigger" val="falling"/>
+      <a name="trigger" val="rising"/>
       <a name="label" val="R3"/>
     </comp>
     <comp lib="0" loc="(660,580)" name="Tunnel">
@@ -2629,7 +2629,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     </comp>
     <comp lib="4" loc="(150,870)" name="Register">
       <a name="width" val="32"/>
-      <a name="trigger" val="falling"/>
+      <a name="trigger" val="rising"/>
       <a name="label" val="R6"/>
     </comp>
     <comp lib="0" loc="(340,1830)" name="Tunnel">
@@ -2681,7 +2681,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     </comp>
     <comp lib="4" loc="(330,1110)" name="Register">
       <a name="width" val="32"/>
-      <a name="trigger" val="falling"/>
+      <a name="trigger" val="rising"/>
       <a name="label" val="R11"/>
     </comp>
     <comp lib="0" loc="(280,1260)" name="Tunnel">
@@ -2841,12 +2841,12 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     </comp>
     <comp lib="4" loc="(730,1830)" name="Register">
       <a name="width" val="32"/>
-      <a name="trigger" val="falling"/>
+      <a name="trigger" val="rising"/>
       <a name="label" val="R29"/>
     </comp>
     <comp lib="4" loc="(950,1770)" name="Register">
       <a name="width" val="32"/>
-      <a name="trigger" val="falling"/>
+      <a name="trigger" val="rising"/>
       <a name="label" val="R31/SP"/>
     </comp>
     <comp lib="0" loc="(110,750)" name="Tunnel">
@@ -2865,7 +2865,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     </comp>
     <comp lib="4" loc="(150,1830)" name="Register">
       <a name="width" val="32"/>
-      <a name="trigger" val="falling"/>
+      <a name="trigger" val="rising"/>
       <a name="label" val="R22"/>
     </comp>
     <comp lib="0" loc="(790,620)" name="Tunnel">
@@ -2891,7 +2891,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     </comp>
     <comp lib="4" loc="(330,870)" name="Register">
       <a name="width" val="32"/>
-      <a name="trigger" val="falling"/>
+      <a name="trigger" val="rising"/>
       <a name="label" val="R7"/>
     </comp>
     <comp lib="0" loc="(330,1020)" name="Tunnel">
@@ -2950,7 +2950,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     </comp>
     <comp lib="4" loc="(150,1710)" name="Register">
       <a name="width" val="32"/>
-      <a name="trigger" val="falling"/>
+      <a name="trigger" val="rising"/>
       <a name="label" val="R20"/>
     </comp>
     <comp lib="0" loc="(560,1830)" name="Tunnel">
@@ -2963,7 +2963,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     </comp>
     <comp lib="4" loc="(150,1230)" name="Register">
       <a name="width" val="32"/>
-      <a name="trigger" val="falling"/>
+      <a name="trigger" val="rising"/>
       <a name="label" val="R12"/>
     </comp>
     <comp lib="0" loc="(280,900)" name="Tunnel">
@@ -3046,7 +3046,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     </comp>
     <comp lib="4" loc="(330,1230)" name="Register">
       <a name="width" val="32"/>
-      <a name="trigger" val="falling"/>
+      <a name="trigger" val="rising"/>
       <a name="label" val="R13"/>
     </comp>
     <comp lib="0" loc="(160,1350)" name="Tunnel">
@@ -3130,7 +3130,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     </comp>
     <comp lib="4" loc="(330,1350)" name="Register">
       <a name="width" val="32"/>
-      <a name="trigger" val="falling"/>
+      <a name="trigger" val="rising"/>
       <a name="label" val="R15"/>
     </comp>
     <comp lib="0" loc="(480,350)" name="Tunnel">
@@ -3153,7 +3153,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     </comp>
     <comp lib="4" loc="(550,1710)" name="Register">
       <a name="width" val="32"/>
-      <a name="trigger" val="falling"/>
+      <a name="trigger" val="rising"/>
       <a name="label" val="R26"/>
     </comp>
     <comp lib="0" loc="(340,870)" name="Tunnel">
@@ -3204,7 +3204,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     </comp>
     <comp lib="4" loc="(150,990)" name="Register">
       <a name="width" val="32"/>
-      <a name="trigger" val="falling"/>
+      <a name="trigger" val="rising"/>
       <a name="label" val="R8"/>
     </comp>
     <comp lib="0" loc="(480,230)" name="Tunnel">
@@ -3248,7 +3248,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     </comp>
     <comp lib="4" loc="(330,1710)" name="Register">
       <a name="width" val="32"/>
-      <a name="trigger" val="falling"/>
+      <a name="trigger" val="rising"/>
       <a name="label" val="R21"/>
     </comp>
     <comp lib="0" loc="(160,230)" name="Tunnel">
@@ -3318,7 +3318,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     </comp>
     <comp lib="4" loc="(950,1640)" name="Register">
       <a name="width" val="32"/>
-      <a name="trigger" val="falling"/>
+      <a name="trigger" val="rising"/>
       <a name="label" val="R30"/>
     </comp>
     <comp lib="0" loc="(690,1590)" name="Tunnel">
@@ -3328,7 +3328,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     </comp>
     <comp lib="4" loc="(330,530)" name="Register">
       <a name="width" val="32"/>
-      <a name="trigger" val="falling"/>
+      <a name="trigger" val="rising"/>
       <a name="label" val="R1"/>
     </comp>
     <comp lib="0" loc="(480,170)" name="Tunnel">
@@ -3342,7 +3342,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     </comp>
     <comp lib="4" loc="(730,1590)" name="Register">
       <a name="width" val="32"/>
-      <a name="trigger" val="falling"/>
+      <a name="trigger" val="rising"/>
       <a name="label" val="R25"/>
     </comp>
     <comp lib="0" loc="(340,1230)" name="Tunnel">
@@ -3391,7 +3391,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     </comp>
     <comp lib="4" loc="(330,750)" name="Register">
       <a name="width" val="32"/>
-      <a name="trigger" val="falling"/>
+      <a name="trigger" val="rising"/>
       <a name="label" val="R5"/>
     </comp>
     <comp lib="0" loc="(790,170)" name="Tunnel">
@@ -3417,7 +3417,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     </comp>
     <comp lib="4" loc="(150,750)" name="Register">
       <a name="width" val="32"/>
-      <a name="trigger" val="falling"/>
+      <a name="trigger" val="rising"/>
       <a name="label" val="R4"/>
     </comp>
     <comp lib="0" loc="(830,890)" name="Tunnel">
@@ -3448,7 +3448,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     </comp>
     <comp lib="4" loc="(150,640)" name="Register">
       <a name="width" val="32"/>
-      <a name="trigger" val="falling"/>
+      <a name="trigger" val="rising"/>
       <a name="label" val="R2"/>
     </comp>
     <comp lib="0" loc="(790,210)" name="Tunnel">
@@ -3488,12 +3488,12 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     </comp>
     <comp lib="4" loc="(330,1590)" name="Register">
       <a name="width" val="32"/>
-      <a name="trigger" val="falling"/>
+      <a name="trigger" val="rising"/>
       <a name="label" val="R19"/>
     </comp>
     <comp lib="4" loc="(150,1110)" name="Register">
       <a name="width" val="32"/>
-      <a name="trigger" val="falling"/>
+      <a name="trigger" val="rising"/>
       <a name="label" val="R10"/>
     </comp>
     <comp lib="0" loc="(160,120)" name="Tunnel">
@@ -3559,7 +3559,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     </comp>
     <comp lib="4" loc="(330,990)" name="Register">
       <a name="width" val="32"/>
-      <a name="trigger" val="falling"/>
+      <a name="trigger" val="rising"/>
       <a name="label" val="R9"/>
     </comp>
     <comp lib="0" loc="(480,460)" name="Tunnel">
@@ -3590,12 +3590,12 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     </comp>
     <comp lib="4" loc="(330,1830)" name="Register">
       <a name="width" val="32"/>
-      <a name="trigger" val="falling"/>
+      <a name="trigger" val="rising"/>
       <a name="label" val="R23"/>
     </comp>
     <comp lib="4" loc="(730,1710)" name="Register">
       <a name="width" val="32"/>
-      <a name="trigger" val="falling"/>
+      <a name="trigger" val="rising"/>
       <a name="label" val="R27"/>
     </comp>
     <comp lib="0" loc="(140,120)" name="Pin">
@@ -3605,7 +3605,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     </comp>
     <comp lib="4" loc="(550,1590)" name="Register">
       <a name="width" val="32"/>
-      <a name="trigger" val="falling"/>
+      <a name="trigger" val="rising"/>
       <a name="label" val="R24"/>
     </comp>
     <comp lib="0" loc="(310,200)" name="Pin">
@@ -3696,7 +3696,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     </comp>
     <comp lib="4" loc="(150,1470)" name="Register">
       <a name="width" val="32"/>
-      <a name="trigger" val="falling"/>
+      <a name="trigger" val="rising"/>
       <a name="label" val="R16"/>
     </comp>
     <comp lib="0" loc="(140,80)" name="Pin">
@@ -3705,7 +3705,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     </comp>
     <comp lib="4" loc="(550,1830)" name="Register">
       <a name="width" val="32"/>
-      <a name="trigger" val="falling"/>
+      <a name="trigger" val="rising"/>
       <a name="label" val="R28"/>
     </comp>
     <comp lib="0" loc="(790,230)" name="Tunnel">
@@ -3872,7 +3872,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     </comp>
     <comp lib="4" loc="(330,1470)" name="Register">
       <a name="width" val="32"/>
-      <a name="trigger" val="falling"/>
+      <a name="trigger" val="rising"/>
       <a name="label" val="R17"/>
     </comp>
     <comp lib="0" loc="(1000,410)" name="Tunnel">
@@ -3903,7 +3903,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     </comp>
     <comp lib="4" loc="(150,1350)" name="Register">
       <a name="width" val="32"/>
-      <a name="trigger" val="falling"/>
+      <a name="trigger" val="rising"/>
       <a name="label" val="R14"/>
     </comp>
     <comp lib="0" loc="(150,1620)" name="Tunnel">
@@ -3923,12 +3923,12 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     </comp>
     <comp lib="4" loc="(150,530)" name="Register">
       <a name="width" val="32"/>
-      <a name="trigger" val="falling"/>
+      <a name="trigger" val="rising"/>
       <a name="label" val="R0"/>
     </comp>
     <comp lib="4" loc="(150,1590)" name="Register">
       <a name="width" val="32"/>
-      <a name="trigger" val="falling"/>
+      <a name="trigger" val="rising"/>
       <a name="label" val="R18"/>
     </comp>
     <comp lib="0" loc="(160,200)" name="Tunnel">
