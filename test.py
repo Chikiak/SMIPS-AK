@@ -1,6 +1,8 @@
 import os
 import subprocess
 import optparse
+import re
+import concurrent.futures
 
 import unittest
 
@@ -32,7 +34,7 @@ class TestCase:
         self.failed = False
         self.error = False
 
-    def run(self, logisim: str, circ: str, template: str, circuit_name: str) -> None:
+    def run(self, logisim: str, circ: str, template: str) -> None:
         # result = ""
         cmd = [
             logisim,
@@ -42,7 +44,7 @@ class TestCase:
             "-load",
             self.file,
             "-sub",
-            circuit_name,
+            template,
             circ,
         ]
         try:
@@ -126,7 +128,7 @@ class TestCase:
 
 
 class TestSuite:
-    def __init__(self, dir: str, base_dir: str, circ: str, template: str, logisim: str, python: str, circuit_name: str):
+    def __init__(self, dir: str, base_dir: str, circ: str, template: str, logisim: str, python: str):
         self.base_dir = base_dir
         self.circ = circ
         self.path = dir
@@ -134,7 +136,6 @@ class TestSuite:
         self.template = template
         self.logisim = logisim
         self.python = python
-        self.circuit_name = circuit_name
         self.failed: bool = False
 
     def setup(self, fn:str|None = None):
@@ -210,16 +211,21 @@ class TestSuite:
         return expected
 
     def run_all(self) -> None:
-        for test in self.test:
-            test.run(self.logisim, self.circ, self.template, self.circuit_name)
-            self.failed |= test.failed
-            test.print()
+        with concurrent.futures.ThreadPoolExecutor() as executor:
+            future_to_test = {
+                executor.submit(test.run, self.logisim, self.circ, self.template): test
+                for test in self.test
+            }
+            for future in concurrent.futures.as_completed(future_to_test):
+                test = future_to_test[future]
+                self.failed |= test.failed
+                test.print()
 
     def run_test(self, test_name: str):
         self.setup(test_name)
         for test in self.test:
             if test.test_name == test_name:
-                test.run(self.logisim, self.circ, self.template, self.circuit_name)
+                test.run(self.logisim, self.circ, self.template)
                 self.failed |= test.failed
                 test.print()
                 return test
@@ -366,14 +372,6 @@ parser.add_option(
     default="python3",
     help="The python program or path to compile tests",
 )
-parser.add_option(
-    "-c",
-    "--circuit-name",
-    dest="circuit_name",
-    type="string",
-    default="S-MIPS",
-    help="The name of the subcircuit to substitute in the template",
-)
 
 unit = False
 
@@ -388,7 +386,6 @@ try:
     verbose_level = int(options.verbose)
     python = options.python
     logisim = options.logisim
-    circuit_name = options.circuit_name
 except:
     input_dir = os.getenv('TESTS', '')
     circ = os.getenv('CIRC', '')
@@ -397,7 +394,6 @@ except:
     verbose_level = int(os.getenv('VERBOSE', 0))
     python = os.getenv('PYTHON', '')
     logisim = os.getenv('LOGISIM', '')
-    circuit_name = os.getenv('CIRCUIT_NAME', 'S-MIPS')
     unit = True
     if not input_dir or not circ:
         parser.error("Incorrect command line arguments")
@@ -412,7 +408,21 @@ if not os.path.exists(template):
     print("El archivo de template no existe")
     exit(1)
 
-test_suite = TestSuite(input_dir, output_folder, circ, template, logisim, python, circuit_name)
+# Patch circuit to enforce S-MIPS Board as main
+try:
+    with open(circ, 'r', encoding='utf-8') as f:
+        content = f.read()
+    
+    if '<main name="S-MIPS Board"/>' not in content:
+        print("Patching main circuit to S-MIPS Board...")
+        content = re.sub(r'<main name="[^"]+"/>', '<main name="S-MIPS Board"/>', content)
+        circ = "s-mips-test.circ"
+        with open(circ, 'w', encoding='utf-8') as f:
+            f.write(content)
+except Exception as e:
+    print(f"Warning: Could not patch circuit file: {e}")
+
+test_suite = TestSuite(input_dir, output_folder, circ, template, logisim, python)
 
 if __name__ == '__main__':
     if unit == True:
